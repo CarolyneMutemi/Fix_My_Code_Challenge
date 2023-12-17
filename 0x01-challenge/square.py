@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-
+"""
+Has the square class.
+"""
 class square():
-    
+    """
+    Square class.
+    """
+
     width = 0
     height = 0
 
-    
+
     def __init__(self, *args, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
@@ -15,9 +20,15 @@ class square():
         return self.width * self.height
 
     def PermiterOfMySquare(self):
+        """
+        Perimeter of the Square.
+        """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
+        """
+        String representation.
+        """
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
